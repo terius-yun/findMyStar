@@ -22,13 +22,14 @@
 
       .menu{
         float: right;
-        width: 30%;
         text-align: right;
         margin-top: 3%;
         margin-right: 5%
       }
 
       #dotMenu{
+        width: 24px;
+        margin-left: 70%;
         margin-bottom: -12px; /* designedbymoong과의 간격 줄이기*/
         /* padding-top: 20%; */
 
@@ -51,18 +52,56 @@
 
       #contectUs-content{
         position: relative;
-        width: 90%;
+        width: 85%;
         max-width: 400px;
         margin: 4em auto;
         background: #FFF;
-        border-radius: .25em .25em .4em .4em;
+        /* border-radius: .25em .25em .4em .4em; */
         text-align: center;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-        padding: 20px;
       }
 
 
+      table{
+        width: 100.2%;
+        border: 2px solid;
+        border-collapse: collapse;
+      }
 
+      td, tr{
+        border: 2px solid;
+      }
+
+
+      .contectUs-left{
+        float: left;
+        margin: 2%;
+      }
+
+      .contectUs-right{
+        float: right;
+        text-align: right;
+        margin: 2%;
+      }
+
+      .contectUs-right p{
+        margin: 0;
+        font-size: 80%;
+      }
+
+      .contectUs-bottom{
+        clear: both;
+        text-align: left;
+        margin: 5% auto 5%;
+      }
+
+      .contectUs-bottom p{
+        margin: 0%;
+      }
+
+      .contectUs-bottom-background{
+        background-color: #5E86CC
+      }
 
 
       #title{
@@ -167,8 +206,18 @@
 
     <div id="contactUs" role="alert">
       <div id="contectUs-content">
-        <h3>Contact Us</h3><p>Do you have any problem?</p><p>Do you have any idea?</p>
-        <p>Moong_mib@gmail.com</p>
+        <table>
+          <tr><td>
+              <h2 class="contectUs-left">Contact Us</h3>
+              <div class="contectUs-right"><p>Do you have any problem?</p><p>Do you have any idea?</p></div>
+          </td></tr>
+          <tr><td class="contectUs-bottom-background">
+          <div class="contectUs-bottom">
+            <p>Moong_mib@gmail.com</p>
+            <p> Moong mib @ Instagram Url : http://Lorem ips um dolor sit amet,</p>
+            <p>Moong mib @ Facebook Url : http://consectetur adipiscing elit, sed do eiusmod tempor</p></div>
+          </td></tr>
+        </table>
       </div>
     </div>
 
