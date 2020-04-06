@@ -42,6 +42,7 @@
 
       #contactUs{
         position: fixed;
+        padding-top: 60%;
         left: 0;
         top: 0;
         height: 100%;
@@ -195,6 +196,10 @@
     </style>
 
   </head>
+
+
+
+
 <body>
   <div class="allContentsButFooter"><!-- footer를 제외한 모든것 -->
 
@@ -226,10 +231,10 @@
       <h1 id="title">Find my star</h1><!-- 상단타이틀 -->
 
       <img id="mainPlanetImg" src="image/freePlanet0.png" alt="행성이미지">
-
+    <div id="contents">
       <h2 id="content1">You can 'Find My Star'</h2>
       <p id="content2"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis </p>
-
+    </div>
     <div class="search-form">
       <p id="beforeNameInput">Please sumbmit your name.</p>
       <h2 id="beforeNameInput2">Name :</h2>
@@ -245,6 +250,10 @@
     <div id="footer">
       <p id='footerText'>ⓐ본 저작물은 ㈜윤형제들의 소유이며 허가없이 복제 및 유포시 법적책임이 따를 수 있습니다.</p>
     </div> <!-- 바닥글 div -->
+
+
+
+
 
 
     <script src="jquery-3.4.1.min.js"></script>
@@ -268,21 +277,14 @@
       if (container.has(e.target).length == 0) {
           container.fadeOut(500);
         }
-    });
-    //팝업창 생성이후 다른공간을 누르면 사라지기
-
-
-
-
+    }); //팝업창 생성이후 다른공간을 누르면 사라지기
 
 //한글만 입력가능하게 만드는 코드 여기부터
-    $("#name-input").on("keyup", function() {
-        // $(this).val($(this).val().replace(/[a-z0-9]|[ \[\]{}()<>?|`~!@#$%^&*-_+=,.;:\"'\\]/g,""));
-          //여기까지 한글만 입력가능하게 만드는 코드
-          $(this).val($(this).val().replace(/[^\!-z]/g,""));//영문만입력가능 코드
-    });
-
-
+    // $("#name-input").on("keyup", function() {
+    //     // $(this).val($(this).val().replace(/[a-z0-9]|[ \[\]{}()<>?|`~!@#$%^&*-_+=,.;:\"'\\]/g,""));
+    //       //여기까지 한글만 입력가능하게 만드는 코드
+    //       $(this).val($(this).val().replace(/[^\!-z]/g,""));//영문만입력가능 코드
+    // });
 
     //글이 입력되면 #name-input과 #search-input의 색을 초록색으로 비어있다면 빨간색으로 표시
     $('#name-input').on('input', checkInput);
@@ -301,28 +303,24 @@
       }
     }
 
-
-
+      $('#search-input').on('click', appearLoading);
+        function appearLoading(){
+          $('#contents').css('display', 'none')
+    }
 // 행성찾기를 하는 코드 시작
       $('#search-input').on('click', seachPlanet);//찾기를 누를때 함수 실행
 
       function seachPlanet(){
         var userName = $('#name-input').val() //userName의 값에 기입된 이름을 넣는다
-        // var birth = Number(birth);// birth값을 숫자형으로
-        //console.log(typeof birth);//숫자형이 맞는지 확인
-
-
-
-
         // var userNameCheck = RegExp(/^[가-힣]{2,4}$/);//한글만 적기 정규식, 글자수 제한
-        var userNameCheck = RegExp(/^[A-Za-z_\-]{2,20}$/);//영문만 적기 정규식, 글자수 제한
-
-        if(userNameCheck.test(userName)){
+        // var userNameCheck = RegExp(/^[A-Za-z_\-]{2,20}$/);//영문만 적기 정규식, 글자수 제한
+        // if(userNameCheck.test(userName)){
+        if(userName != ""){
           function random_plant(){};
 
           var number = 0;
           //별들 목록
-          random_plant[number++] = "yourplanet1.html"
+          random_plant[number++] =  "yourplanet1.html"
           random_plant[number++] =  "yourplanet2.html"
           random_plant[number++] =  "yourplanet3.html"
 
@@ -334,7 +332,7 @@
 
 
         }else{
-          alert('정확한 성함을 기입하세요.')
+          alert('Please sumit your name.')
         }
       }
 // 행성찾기를 하는 코드 끝
