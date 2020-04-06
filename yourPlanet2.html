@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>지구별</title>
+
+    <style media="screen">
+      #allContentsButFooter{
+        text-align: center;
+        background-color: #808080
+      }
+
+      #buttonP{
+        /* border: none; */
+        border-radius: 5px;
+        width: 20%;
+        margin: 2%;
+        padding: 1%
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <div id="allContentsButFooter">
+      <h1><span class="userName"></span>님의 별은 목성이에요.</h1>
+      <p>너무 흔하다구요? 우리에겐 익숙하지만 드넓은 우주속에 목성이라는 별은 하나뿐이랍니다.</p>
+      <p>이세상에 유일한 당신과 같죠?</p>
+      <img src="목성.png" alt="지구이미지"><br>
+
+      <input type="button" name="search" id="buttonP" value="다시찾기"><br>
+
+
+      <a href="junkPagev메인 초안 자바스크립트연습.html">처음으로 돌아가기</a>
+    </div>
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+
+              var para = document.location.href.split('=');
+              //ㄴ> url에서 =를 기준으로 나누어 주소를 추출
+              console.log(para);
+
+              var dec = decodeURI(para)
+              //ㄴ> url에 인코딩된 문자열을 디코딩 (기존에 외계어같은 문자들을 변환)
+              console.log(dec);
+              var loadName = dec.split(',');
+              // ㄴ> 디코딩된 url에서 ,기준으로 배열을 나눔
+              var name = loadName[1];
+              //ㄴ> 이름만 추출
+              console.log(name);
+
+              $(".userName").text(name);
+              //ㄴ>유저의 이름을 표출
+
+
+            $(function(){  //jquery 시작
+                /*
+                난수 (랜덤한 숫자) 만들기 Math.random()
+                */
+
+                //#buttonP 클릭 이벤트
+                $("#buttonP").click(function(){
+
+                  function random_plant(){};
+
+                  var number = 0;
+                  //별들 목록
+                  random_plant[number++] = "yourplanet1.html"
+                  random_plant[number++] =  "yourplanet2.html"
+                  random_plant[number++] =  "yourplanet3.html"
+
+
+                  var random_number = Math.floor(Math.random() * number);
+                  //ㄴ>난수 생성
+                  location.href =  random_plant[random_number] + '?index=' + name
+                  //ㄴ> 유저네임을 붙혀 이동
+            });
+          });
+
+
+
+
+    </script>
+
+
+
+
+  </body>
+</html>
