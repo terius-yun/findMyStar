@@ -5,170 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>junkPage</title>
 
-
+  <link rel="stylesheet" type="text/css" href="index.css">
     <style media="screen">
-      body{
-        margin:  0px;
-      } /*좌우 여백제거*/
-
-      .allContentsButFooter{
-        max-width: 960px;
-        min-width: 375px;
-        min-height: 95vh;
-        text-align : center;
-        margin: auto;
-        background-color: rgba(232,226,210,1);
-      }
-
-      .menu{
-        float: right;
-        text-align: right;
-        margin-top: 3%;
-        margin-right: 5%
-      }
-
-      #dotMenu{
-        width: 24px;
-        margin-left: 70%;
-        margin-bottom: -12px; /* designedbymoong과의 간격 줄이기*/
-        /* padding-top: 20%; */
-
-      }
-
-      #moong{
-        margin-top: 0px;/*상단 마진제거*/
-        font-size: 70%;
-      }
-
-      #contactUs{
-        position: fixed;
-        padding-top: 60%;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        background-color: rgba(0,0,0,0.50);
-        display: none;
-      }
-
-      #contectUs-content{
-        position: relative;
-        width: 85%;
-        max-width: 400px;
-        margin: 4em auto;
-        background: #FFF;
-        /* border-radius: .25em .25em .4em .4em; */
-        text-align: center;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-      }
-
-
-      table{
-        width: 100.2%;
-        border: 2px solid;
-        border-collapse: collapse;
-      }
-
-      td, tr{
-        border: 2px solid;
-      }
-
-
-      .contectUs-left{
-        float: left;
-        margin: 2%;
-      }
-
-      .contectUs-right{
-        float: right;
-        text-align: right;
-        margin: 2%;
-      }
-
-      .contectUs-right p{
-        margin: 0;
-        font-size: 80%;
-      }
-
-      .contectUs-bottom{
-        clear: both;
-        text-align: left;
-        margin: 5% auto 5%;
-      }
-
-      .contectUs-bottom p{
-        margin: 0%;
-      }
-
-      .contectUs-bottom-background{
-        background-color: #5E86CC
-      }
-
-
-      #title{
-        width: 60%;
-        margin-top: 0%; /*상단 여백제거  */
-        padding-top: 5% ;
-
-      }
-
-      /* #title2{
-        margin: 5%;
-      } */
-
-
-
-      #mainPlanetImg{
-        max-width: 90%;
-        margin-top: 3%
-      }
-
-      #content2{
-        color: rgba(136,122,95,1);
-        text-align: center;
-        font-size: 100%;
-        padding: 0% 5% 0% ;
-      }
-
-      #loadingIcon{
-        margin: auto;
-        width: 24px;
-        display: none;
-      }
-
-
-      #loadingText{
-        display: none;
-        background-color: #84AD9D;
-        border-radius: 12px;
-        width: 95%;
-        margin: 15% 2.5% 2.5% 2.5%;
-        padding: 4% 0 4%;
-        font-size : 135%;
-      }
-
-      .ads{/*  광고 css */
-        display: none;
-        background-color: #B3BFBF;
-        border: 1px solid;
-        border-radius: 12px;
-        width: 85%;
-        margin: 3% auto;
-        padding: 6% 0 6%;
-        font-size : 135%;
-      }
-
-      #topAds{
-        margin-bottom: 15%;
-      }
-
-      #bottomAds{
-      }
-
-
-      input:focus{
-        outline: none;
-      } /*input 태그 테두리 제거 */
 
       #beforeNameInput{
         text-align: left;
@@ -197,7 +35,7 @@
 
       }
 
-      #search-input{
+      #findStar{
         border: none;
         background-color: rgba(255,41,86,1);
         border-radius: 12px;
@@ -212,22 +50,6 @@
         width : 100px;
         height : 50px;
       } */
-
-      #footer{
-        text-align: center;
-        margin: auto;
-        font-size: 10px;
-        max-width: 960px;
-        min-width: 375px;
-        min-height: 5vh;
-        padding-top: ;
-        background-color: rgba(232,226,210,1);/* name의 테두리색이랑 다르다 */
-
-      }
-
-      #footerText{
-        margin: 0px;
-      }
 
     </style>
 
@@ -264,40 +86,30 @@
 
       <h1 id="title">Find my star</h1><!-- 상단타이틀 -->
 
-      <img id="mainPlanetImg" src="image/freePlanet0.png" alt="행성이미지">
+      <img id="mainPlanetImg" src="image/freePlanet.png" alt="행성이미지">
     <div id="contents">
       <h2 id="content1">You can 'Find My Star'</h2>
       <p id="content2"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis </p>
     </div>
 
-    <div class="search-form">
+    <div class="activeThings">
       <p id="beforeNameInput">Please sumbmit your name.</p>
       <h2 id="beforeNameInput2">Name :</h2>
       <form> <!-- 폼 div -->
           <input type="text" name="name" id="name-input" placeholder="Please sumit your name."><br>
           <br><!-- 사이간견 띄우기 -->
-          <input type="button" name="search" id="search-input" value="Find My Star">
+          <input type="button" name="search" id="findStar" value="Find My Star">
       </form>
     </div>   <!-- 폼 div -->
 
 
-
     <div id="loadingDiv">
-      <p class="ads" id="topAds">Maybe Ads wii be here</p>
+      <p class="ads" id="loadingTopAds">Maybe Ads wii be here</p>
       <p id="loadingIcon"><img src="image/dot-24px.png" alt="로딩아이콘"></p>
       <p id="loadingText">Wait a second Please...</p>
-      <p class="ads" id="bottomAds">Maybe Ads wii be here</p>
     </div>
 
-  </div><!-- footer를 제외한 모든것 -->
-
-
-    <div id="footer">
-      <p id='footerText'>ⓐ본 저작물은 ㈜윤형제들의 소유이며 허가없이 복제 및 유포시 법적책임이 따를 수 있습니다.</p>
-    </div> <!-- 바닥글 div -->
-
-
-
+      <p class="ads" id="BottomAds">Maybe Ads wii be here</p>
 
 
 
@@ -306,23 +118,9 @@
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script> -->
+    <script src="basicScript.js"></script>
     <script>
 
-      //팝업창 보이기
-    $('#dotMenu').on('click', contactUsFadeIn);
-
-    function contactUsFadeIn(){
-      $('#contactUs').fadeIn(500);
-    }; //팝업창 보이기
-
-    //팝업창 생성이후 다른공간을 누르면 사라지기
-    $(document).mouseup(function(e){
-      var container = $('#contactUs')
-
-      if (container.has(e.target).length == 0) {
-          container.fadeOut(500);
-        }
-    }); //팝업창 생성이후 다른공간을 누르면 사라지기
 
 //한글만 입력가능하게 만드는 코드 여기부터
     // $("#name-input").on("keyup", function() {
@@ -331,7 +129,7 @@
     //       $(this).val($(this).val().replace(/[^\!-z]/g,""));//영문만입력가능 코드
     // });
 
-    //글이 입력되면 #name-input과 #search-input의 색을 초록색으로 비어있다면 빨간색으로 표시
+    //글이 입력되면 #name-input과 #findStar의 색을 초록색으로 비어있다면 빨간색으로 표시
     $('#name-input').on('input', checkInput);
     function checkInput(){
       var userName = $('#name-input').val();
@@ -339,64 +137,53 @@
         $('#beforeNameInput2').css('color', 'rgba(255,41,86,1)');
         $('#name-input').css('background-color', 'rgba(244,177,175,1)');//이름칸 속 색
         $('#name-input').css('border-color', 'rgba(255,107,136,1)');//이름칸 테두리 색
-        $('#search-input').css('background-color', 'rgba(255,41,86,1)');//버튼 색
+        $('#findStar').css('background-color', 'rgba(255,41,86,1)');//버튼 색
       }else {//빈칸이아니라면 아래
         $('#beforeNameInput2').css('color', 'rgba(11,182,140,1)');
         $('#name-input').css('background-color', 'rgba(168,207,192,1)');//속 색
         $('#name-input').css('border-color', 'rgba(11,182,140,1)');// 테두리 색
-        $('#search-input').css('background-color', 'rgba(11,182,140,1)');//버튼 색
+        $('#findStar').css('background-color', 'rgba(11,182,140,1)');//버튼 색
       }
     }
 
+    //버튼 클릭시 글들과 입력,버튼 모두 사라지며 로딩 아이콘 및 ads 생성
+    $('#findStar').on('click', appearLoading);
+    function appearLoading(){
+
+    var userName = $('#name-input').val()
+
+    if (userName != "") {
+    $('#contents').css('display', 'none')
+    $('.activeThings').css('display', 'none')
+    }else {
+      }
+    }
+
+    $('#findStar').on('click', loadingIconFadeIn);
+    function loadingIconFadeIn(){
+
+    var userName = $('#name-input').val()
+
+    if (userName != "") {
+    $('#loadingIcon').fadeIn(100);
+    $('#loadingText').fadeIn(100);
+    $('#loadingTopAds').fadeIn(100);
+    }else {
+    }
+    } //버튼 클릭시 글들이 사라지며 로딩 ads 아이콘 생성
 
 
-          //버튼 클릭시 글들과 입력,버튼 모두 사라지며 로딩 아이콘 및 ads 생성
-      $('#search-input').on('click', appearLoading);
-        function appearLoading(){
+    //loadingIcon 클릭시 팝업창 보이기
+    $('#loadingIcon').on('click', contactUsFadeIn);
 
-          var userName = $('#name-input').val()
-
-          if (userName != "") {
-          $('#contents').css('display', 'none')
-          $('.search-form').css('display', 'none')
-          }else {
-            }
-          }
-
-    $('#search-input').on('click', loadingIconFadeIn);
-        function loadingIconFadeIn(){
-
-          var userName = $('#name-input').val()
-
-          if (userName != "") {
-          $('#loadingIcon').fadeIn(100);
-          $('#loadingText').fadeIn(100);
-          $('.ads').fadeIn(100);
-        }else {
-          }
-        } //버튼 클릭시 글들이 사라지며 로딩 ads 아이콘 생성
-
-
-        //loadingIcon 클릭시 팝업창 보이기
-      $('#loadingIcon').on('click', contactUsFadeIn);
-
-      function contactUsFadeIn(){
-        $('#contactUs').fadeIn(500);
-      }; //loadingIcon 클릭시 팝업창 보이기
-
-      //팝업창 생성이후 다른공간을 누르면 사라지기
-      $(document).mouseup(function(e){
-        var container = $('#contactUs')
-
-        if (container.has(e.target).length == 0) {
-            container.fadeOut(500);
-          }
-      }); //팝업창 생성이후 다른공간을 누르면 사라지기
+    function contactUsFadeIn(){
+    $('#contactUs').fadeIn(500);
+    }; //loadingIcon 클릭시 팝업창 보이기
 
 
 
 // 행성찾기를 하는 코드 시작
-      $('#search-input').on('click', seachPlanet);//찾기를 누를때 함수 실행
+      $('#findStar').on('click', seachPlanet);//찾기를 누를때 함수 실행
 
         function seachPlanet(){
         var userName = $('#name-input').val() //userName의 값에 기입된 이름을 넣는다
@@ -419,15 +206,15 @@
             var number = 0;
                       //별들 목록
             random_plant[number++] =  "yourPlanet1.html"
-            random_plant[number++] =  "yourPlanet2.html"
-            random_plant[number++] =  "yourPlanet3.html"
+            // random_plant[number++] =  "yourPlanet2.html"
+            // random_plant[number++] =  "yourPlanet3.html"
 
 
             var random_number = Math.floor(Math.random() * number);
             //ㄴ>난수 생성
             location.href =  random_plant[random_number] + '?index=' + userName;
             //ㄴ> 유저네임을 붙혀 새로운 페이지로 이동
-          })();
+          })();// 정확히 닫아줘야한다.
 
         }else{
           alert('Please sumit your name.')
