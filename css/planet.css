@@ -1,0 +1,25 @@
+.activeThings{
+    margin-top:25%;
+  }
+
+  #returnHomeBotton{
+    width: 47.5%;
+    border: none;
+    border-radius: 12px 0px 0px 12px;
+    background-color: #0BB68C;
+    margin: 2% -3px 2% 2%;
+    padding: 4%;
+    font-size : 135%;
+    -webkit-appearance:none;
+  }
+
+  #shareButton{
+    width: 47.5%;
+    border: none;
+    border-radius: 0px 12px 12px 0px;
+    background-color: #5E86CC;
+    margin: 2% 2% 2% -3px;
+    padding: 4%;
+    font-size : 135%;
+    -webkit-appearance:none;
+  }

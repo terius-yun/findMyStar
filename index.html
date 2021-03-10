@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>지구별</title>
-
+    <title>junkPage</title>
     <link rel="stylesheet" type="text/css" href="css/common.css">
-    <link rel="stylesheet" type="text/css" href="css/planet.css">
-
+    <link rel="stylesheet" type="text/css" href="css/index.css">
   </head>
   <body>
-    <div class="allContentsButFooter">
+    <div class="allContentsButFooter"><!-- footer를 제외한 모든것 -->
+
+
       <div class="menu">
         <p id="dotMenu"><img src="image/dot-24px.png" alt="우상단메뉴"></p>
         <p id="moong">designed by moong</p>
@@ -35,21 +35,21 @@
 
         <h1 id="title">Find my star</h1><!-- 상단타이틀 -->
 
-
-      <img id="mainPlanetImg" src="image/지구.png" alt="지구이미지"><br>
-
+        <img id="mainPlanetImg" src="image/freePlanet.png" alt="행성이미지">
       <div id="contents">
-        <h2 id="content1"><span class="userName"></span>님의 별은 지구에요.</h2>
+        <h2 id="content1">You can 'Find My Star'</h2>
         <p id="content2"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis </p>
       </div>
 
       <div class="activeThings">
-        <input type="button" name="search" id="returnHomeBotton" value="Retry">
-        <!-- 페이스북공유 -->
-        <input type="button" name="share" id="shareButton" value="Share" onclick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=' +encodeURIComponent(document.URL)+'&t='+encodeURIComponent(document.title), 'facebooksharedialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" alt="Share on Facebook">
-        <!-- <a href="#" onclick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=' +encodeURIComponent(document.URL)+'&t='+encodeURIComponent(document.title), 'facebooksharedialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" alt="Share on Facebook" > 페이스북</a> -->
-
-      </div>
+        <p id="beforeNameInput">Please sumbmit your name.</p>
+        <h2 id="beforeNameInput2">Name :</h2>
+        <form> <!-- 폼 div -->
+            <input type="text" name="name" id="name-input" placeholder="Please sumit your name."><br>
+            <br><!-- 사이간견 띄우기 -->
+            <input type="button" name="search" id="findStar" value="Find My Star">
+        </form>
+      </div>   <!-- 폼 div -->
 
 
       <div id="loadingDiv">
@@ -57,14 +57,13 @@
         <p id="loadingIcon"><img src="image/dot-24px.png" alt="로딩아이콘"></p>
         <p id="loadingText">Wait a second Please...</p>
       </div>
+
         <p class="ads" id="BottomAds">Maybe Ads wii be here</p>
 
 
-    </div><!-- footer를 제외한 모든것 -->
 
-
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/basicScript.js"></script>
-    <script src="js/planet_js.js"></script>
+      <script src="js/jquery-3.4.1.min.js"></script>
+      <script src="js/basicScript.js"></script>
+      <script src="js/index.js"></script>
   </body>
 </html>
